@@ -3,7 +3,6 @@ package hacs;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.*;
 import java.text.DateFormat;
 
 /**
@@ -105,24 +104,24 @@ public class InstructorAssignmentMenu extends AssignmentMenu
   {
     theAssignment=assignment;
     Solution theSolution;
-    tbAssignmentName.setText(theAssignment.AssName );
+    tbAssignmentName.setText(theAssignment.assName);
 
     DateFormat theDateFormat=DateFormat.getDateInstance(DateFormat.SHORT );
-    tbDueDate.setText(theDateFormat.format(theAssignment.DueDate));
-    tbSuggestedSolution.setText(theAssignment.SuggestSolution.SolutionFileName );
+    tbDueDate.setText(theDateFormat.format(theAssignment.dueDate));
+    tbSuggestedSolution.setText(theAssignment.suggestSolution.SolutionFileName );
     refreshSolutionList();
     show();
   }
 
   void buttonClose_actionPerformed(ActionEvent e)
   {
-    theAssignment.AssName = tbAssignmentName.getText() ;
+    theAssignment.assName = tbAssignmentName.getText() ;
     DateFormat tempDateFormat=DateFormat.getDateInstance(DateFormat.SHORT );
     try
     {
-      theAssignment.DueDate=tempDateFormat.parse(tbDueDate.getText() );
+      theAssignment.dueDate =tempDateFormat.parse(tbDueDate.getText() );
     }catch (Exception ee){};
-    theAssignment.SuggestSolution.SolutionFileName =tbSuggestedSolution.getText() ;
+    theAssignment.suggestSolution.SolutionFileName =tbSuggestedSolution.getText() ;
     hide();
   }
 
