@@ -100,7 +100,7 @@ public class InstructorAssignmentMenu extends AssignmentMenu
     this.getContentPane().add(buttonGrade, null);
     this.getContentPane().add(buttonReport, null);
   }
-  public void ShowMenu(Assignment assignment, Person person)
+  public void showMenu(Assignment assignment, Person person)
   {
     theAssignment=assignment;
     Solution theSolution;

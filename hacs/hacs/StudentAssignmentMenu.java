@@ -95,7 +95,7 @@ public class StudentAssignmentMenu extends AssignmentMenu {
 	 * check if the student has already had a solution or not. if not , create a new
 	 * solution for the student. after showing the solution attatch the soluiton;
 	 */
-	public void ShowMenu(Assignment assignment, Person thePerson) {
+	public void showMenu(Assignment assignment, Person thePerson) {
 		theAssignment = assignment;
 		SolutionIterator theIter = theAssignment.getSolutionIterator();
 		theSolution = (Solution) theIter.next(thePerson.UserName);

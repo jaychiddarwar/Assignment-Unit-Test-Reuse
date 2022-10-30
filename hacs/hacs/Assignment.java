@@ -49,7 +49,6 @@ public class Assignment {
         return mySolution;
     }
 
-    ////add the theSolution to the Solutionlist
     public void addSolution(Solution theSolution) {
         theSolutionList.add(theSolution);
     }
