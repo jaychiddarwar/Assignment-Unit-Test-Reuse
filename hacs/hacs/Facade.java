@@ -123,7 +123,7 @@ public class Facade {
 	 */
 	void CreateCourseList() {
 		theCourseList = new ClassCourseList();
-		theCourseList.InitializeFromFile("CourseInfo.txt");
+		theCourseList.initializeFromFile("CourseInfo.txt");
 	}
 
 	/*
