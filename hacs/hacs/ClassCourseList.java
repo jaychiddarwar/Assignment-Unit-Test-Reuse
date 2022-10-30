@@ -17,7 +17,7 @@ public class ClassCourseList extends ArrayList<Course> {
 	public ClassCourseList() {
 	}
 
-	//// initialize the list by reading from the file.
+
 	void InitializeFromFile(String theFileName) {
 		try {
 			BufferedReader file;
