@@ -50,7 +50,7 @@ abstract public class Person {
 	}
 
 	// show the assignment list
-	public boolean ShowMenu() {
+	public boolean showMenu() {
 		// create a iterator for the assignment list
 //    Iterator theIter=new ListIterator(CurrentCourse.AssList );
 		Iterator theIter = CurrentCourse.assignmentList.iterator();

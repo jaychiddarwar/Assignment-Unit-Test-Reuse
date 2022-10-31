@@ -28,8 +28,8 @@ public class Student extends Person {
 	}
 
 	@Override
-	public boolean ShowMenu() {
-		super.ShowMenu();
+	public boolean showMenu() {
+		super.showMenu();
 		showViewButtons();
 		showComboxes();
 		showRadios();

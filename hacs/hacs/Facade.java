@@ -181,7 +181,7 @@ public class Facade {
 
     public boolean courseOperation() {
         thePerson.CreateCourseMenu(theSelecteCourse, nCourseLevel);
-        return thePerson.ShowMenu();//// 0: logout 1 select an other course
+        return thePerson.showMenu();//// 0: logout 1 select an other course
     }
 
     /**

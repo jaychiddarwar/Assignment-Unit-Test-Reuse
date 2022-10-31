@@ -13,14 +13,11 @@ import java.awt.event.*;
 
 public class HighLevelCourseMenu extends CourseMenu {
 
-	/*
+	/**
 	 * JButton AssignmentAddButton = new JButton(); JRadioButton OptionRadio = new
 	 * JRadioButton(); JComboBox OptionCombo = new JComboBox(); JButton
 	 * OptionViewButton = new JButton(); JButton OptionAddButton = new JButton();
 	 */
-
-	public HighLevelCourseMenu() {
-	}
 
 	void showMenu(Course theCourse) {
 		showViewButtons();
