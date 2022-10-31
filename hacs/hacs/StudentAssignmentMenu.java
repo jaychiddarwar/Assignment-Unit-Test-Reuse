@@ -103,14 +103,14 @@ public class StudentAssignmentMenu extends AssignmentMenu {
 			tbSolution.setText("");
 			lGrade.setText("-1");
 		} else {
-			tbSolution.setText(theSolution.SolutionFileName);
+			tbSolution.setText(theSolution.solutionFileName);
 			lGrade.setText(theSolution.getGradeString());
 
 		}
 
 		lAssignmentName.setText(theAssignment.assName);
 		lDueDate.setText(theAssignment.dueDate.toString());
-		lSuggestedSolution.setText(theAssignment.suggestSolution.SolutionFileName);
+		lSuggestedSolution.setText(theAssignment.suggestSolution.solutionFileName);
 
 		show();
 
@@ -120,7 +120,7 @@ public class StudentAssignmentMenu extends AssignmentMenu {
 				theAssignment.addSolution(theSolution);
 			}
 			theSolution.theAuthor = thePerson.userName;
-			theSolution.SolutionFileName = tbSolution.getText();
+			theSolution.solutionFileName = tbSolution.getText();
 			theSolution.theSubmitData = new Date();
 		}
 	}

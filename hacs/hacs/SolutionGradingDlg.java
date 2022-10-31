@@ -50,7 +50,7 @@ public class SolutionGradingDlg extends JDialog {
 	void show(Solution solution) {
 		theSolution = solution;
 		tfGrad.setText("" + theSolution.getGradeInt());
-		labelSolutionFileName.setText(theSolution.SolutionFileName);
+		labelSolutionFileName.setText(theSolution.solutionFileName);
 		show();
 	}
 
