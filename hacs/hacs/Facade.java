@@ -21,11 +21,11 @@ public class Facade {
 
 
     static public boolean Login(UserInfoItem userinfoItem) {
-        Login login = new Login();
+        login login = new login();
         login.setModal(true);
         login.show();
-        userinfoItem.strUserName = login.GetUserName();
-        userinfoItem.UserType = login.GetUserType();
+        userinfoItem.strUserName = login.getUserName();
+        userinfoItem.UserType = login.getUserType();
         return login.isExit();
     }
 
