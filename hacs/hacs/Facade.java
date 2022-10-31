@@ -76,7 +76,7 @@ public class Facade {
 
     void gradeSolution(Solution theSolution) {
         SolutionMenu solutionMenu = new SolutionMenu();
-        solutionMenu.ShowMenu(theSolution);
+        solutionMenu.showMenu(theSolution);
     }
 
     void reportSolutions(Assignment theAssignment) {
