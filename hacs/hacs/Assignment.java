@@ -10,8 +10,8 @@ package hacs;
  * @version 1.0
  */
 
-import java.util.*;
 import java.text.DateFormat;
+import java.util.Date;
 
 public class Assignment {
 
@@ -37,11 +37,7 @@ public class Assignment {
     public boolean isOverDue() {
         Date today;
         today = new Date();
-        if (today.after(this.dueDate)) {
-            return true;
-        } else {
-            return false;
-        }
+        return today.after(this.dueDate);
     }
 
     public Solution addSolution() {

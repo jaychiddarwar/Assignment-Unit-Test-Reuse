@@ -1,7 +1,8 @@
 package hacs;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
-import java.io.*;
 
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
@@ -36,7 +37,7 @@ public class ClassCourseList extends ArrayList<Course> {
         int nCourseCount = size();
         for (int i = 0; i < nCourseCount; i++) {
             Course theCourse;
-            theCourse = (Course) get(i);
+            theCourse = get(i);
             if (theCourse.courseName.compareTo(courseName) == 0)
                 return theCourse;
         }

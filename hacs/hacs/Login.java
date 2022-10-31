@@ -1,12 +1,12 @@
 package hacs;
 
-import javax.swing.*;
-
 import hacs.UserInfoItem.USER_TYPE;
 
+import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
+import java.awt.event.ActionEvent;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
@@ -87,7 +87,7 @@ public class Login extends JDialog {
         m_bExit = false;
         System.out.println("login clicked");
         try {
-            if (studentRadio.isSelected() == true) {
+            if (studentRadio.isSelected()) {
                 userType = USER_TYPE.Student;
                 file = new BufferedReader(new FileReader("StuInfo.txt"));
             } else// instructor
@@ -102,7 +102,8 @@ public class Login extends JDialog {
             while ((aline = file.readLine()) != null) {
                 UserName = getUserName(aline);
                 Password = getPassword(aline);
-                if (UserName.compareTo(userBox) == 0 && Password.compareTo(PasswordBox) == 0)
+                if (UserName.compareTo(userBox) == 0 &&
+                        Password.compareTo(PasswordBox) == 0)
                     LoginName = UserName;
             }
             if (LoginName != null) {
@@ -127,7 +128,7 @@ public class Login extends JDialog {
      */
     private String getPassword(String aline) {
         int Sep = aline.lastIndexOf(':');
-        return aline.substring(Sep + 1, aline.length());
+        return aline.substring(Sep + 1);
     }
 
     /**

@@ -1,6 +1,7 @@
 package hacs;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
@@ -14,11 +15,10 @@ import java.io.*;
 
 public class Facade {
     public int userType;
-    private Course theSelecteCourse = null;
-    private int nCourseLevel = 0;
     ClassCourseList theCourseList;
     Person thePerson;
-
+    private Course theSelecteCourse = null;
+    private int nCourseLevel = 0;
 
     static public boolean Login(UserInfoItem userinfoItem) {
         Login Login = new Login();
@@ -41,7 +41,7 @@ public class Facade {
         AssignmentMenu theAssignmentMenu;
         if (thePerson.type == 0)/// student
         {
-            theAssignmentMenu = new studentAssignmentMenu();
+            theAssignmentMenu = new StudentAssignmentMenu();
         } else {
             theAssignmentMenu = new InstructorAssignmentMenu();
         }
@@ -61,7 +61,7 @@ public class Facade {
         AssignmentMenu theAssignmentMenu;
         if (thePerson.type == 0)/// student
         {
-            theAssignmentMenu = new studentAssignmentMenu();
+            theAssignmentMenu = new StudentAssignmentMenu();
         } else {
             theAssignmentMenu = new InstructorAssignmentMenu();
         }
@@ -156,7 +156,7 @@ public class Facade {
      */
     private String getCourseName(String aline) {
         int Sep = aline.lastIndexOf(':');
-        return aline.substring(Sep + 1, aline.length());
+        return aline.substring(Sep + 1);
     }
 
     /**

@@ -2,7 +2,7 @@ package hacs;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
 import java.text.DateFormat;
 
 /**
@@ -16,20 +16,19 @@ import java.text.DateFormat;
  */
 
 public class InstructorAssignmentMenu extends AssignmentMenu {
-    private boolean bSubmit = false;
-    private Solution theSolution;
-    private Assignment theAssignment;
     JComboBox CombSolutionList = new JComboBox();
     JTextField tbAssignmentName = new JTextField();
     JTextField tbDueDate = new JTextField();
     JTextField tbSuggestedSolution = new JTextField();
-
     JLabel jLabel1 = new JLabel();
     JLabel jLabel2 = new JLabel();
     JLabel jLabel3 = new JLabel();
     JButton buttonGrade = new JButton();
     JButton buttonReport = new JButton();
     JButton buttonClose = new JButton();
+    private final boolean bSubmit = false;
+    private Solution theSolution;
+    private Assignment theAssignment;
 
     public InstructorAssignmentMenu() {
         try {
@@ -106,7 +105,6 @@ public class InstructorAssignmentMenu extends AssignmentMenu {
             theAssignment.dueDate = tempDateFormat.parse(tbDueDate.getText());
         } catch (Exception ee) {
         }
-        ;
         theAssignment.suggestSolution.solutionFileName = tbSuggestedSolution.getText();
         hide();
     }

@@ -12,7 +12,7 @@ import java.util.Date;
  * @version 1.0
  */
 
-public class studentAssignmentMenu extends AssignmentMenu {
+public class StudentAssignmentMenu extends AssignmentMenu {
     JLabel lAssignmentName = new JLabel();
     JLabel lDueDate = new JLabel();
     JTextField tbSolution = new JTextField();
@@ -29,7 +29,7 @@ public class studentAssignmentMenu extends AssignmentMenu {
     private Solution theSolution;
     private Assignment theAssignment;
 
-    public studentAssignmentMenu() {
+    public StudentAssignmentMenu() {
         try {
             jbInit();
         } catch (Exception e) {

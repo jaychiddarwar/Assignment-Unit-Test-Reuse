@@ -26,7 +26,7 @@ public class CourseIterator implements Iterator {
     }
 
     public Object next() {
-        if (hasNext() == true) {
+        if (hasNext()) {
             currentCourseNumber++;
             return theCourseList.get(currentCourseNumber);
         } else {

@@ -1,7 +1,8 @@
 package hacs;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Iterator;
-import java.util.*;
 
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
@@ -42,7 +43,7 @@ public class ReminderVisitor extends NodeVisitor {
     public void visitCourse(Course course) {
         Iterator<Assignment> assignmentList = course.assignmentList.listIterator();
         while (assignmentList.hasNext()) {
-            Assignment assignment = (Assignment) assignmentList.next();
+            Assignment assignment = assignmentList.next();
             assignment.accept(this);
         }
     }
@@ -55,7 +56,7 @@ public class ReminderVisitor extends NodeVisitor {
         calendar.setTime(assignment.dueDate);
         int nDueDate = calendar.get(Calendar.DAY_OF_YEAR);
         if (nDueDate <= (nToday + 1) && nDueDate >= nToday) {
-            mReminder.listUpcoming.add("today is " + today.toString() + " " +
+            mReminder.listUpcoming.add("today is " + today + " " +
                     assignment.assName + " Due Date is " +
                     assignment.getDueDateString());
         }

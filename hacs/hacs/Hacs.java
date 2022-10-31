@@ -18,19 +18,17 @@ public class Hacs {
         theFacade.createCourseList();
         while (true) {
             boolean bExit = false;
-            bExit = theFacade.Login(userInfoItem);
+            bExit = Facade.Login(userInfoItem);
             if (bExit) {
                 break;
             }
             theFacade.createUser(userInfoItem);
             theFacade.attachCourseToUser();
-            if (userInfoItem.UserType == UserInfoItem.USER_TYPE.Student)
-                theFacade.remind();
+            if (userInfoItem.UserType == UserInfoItem.USER_TYPE.Student) theFacade.remind();
             boolean bLogout = false;
             while (!bLogout) {
                 bLogout = theFacade.selectCourse();
-                if (bLogout)
-                    break;
+                if (bLogout) break;
                 bLogout = theFacade.courseOperation();
             }
         }

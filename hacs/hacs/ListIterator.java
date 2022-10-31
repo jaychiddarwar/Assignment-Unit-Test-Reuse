@@ -1,6 +1,7 @@
 package hacs;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
@@ -26,7 +27,7 @@ public class ListIterator implements Iterator<Object> {
     }
 
     public Object next() {
-        if (hasNext() == true) {
+        if (hasNext()) {
             CurrentNumber++;
             return theList.get(CurrentNumber);
         } else {

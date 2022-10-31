@@ -1,6 +1,6 @@
 package hacs;
 
-import java.util.*;
+import java.util.Date;
 
 /**
  * Title: HACS Description: CSE870 Homework 3: Implementing Design Patterns
@@ -46,11 +46,11 @@ public class Solution {
         return theGrade;
     }
 
-    public void setReported(boolean reported) {
-        this.reported = reported;
-    }
-
     public boolean isReported() {
         return reported;
+    }
+
+    public void setReported(boolean reported) {
+        this.reported = reported;
     }
 }
