@@ -41,7 +41,7 @@ public class Facade {
         AssignmentMenu theAssignmentMenu;
         if (thePerson.type == 0)/// student
         {
-            theAssignmentMenu = new StudentAssignmentMenu();
+            theAssignmentMenu = new studentAssignmentMenu();
         } else {
             theAssignmentMenu = new InstructorAssignmentMenu();
         }
@@ -61,7 +61,7 @@ public class Facade {
         AssignmentMenu theAssignmentMenu;
         if (thePerson.type == 0)/// student
         {
-            theAssignmentMenu = new StudentAssignmentMenu();
+            theAssignmentMenu = new studentAssignmentMenu();
         } else {
             theAssignmentMenu = new InstructorAssignmentMenu();
         }
