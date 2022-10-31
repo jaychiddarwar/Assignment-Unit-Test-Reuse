@@ -52,7 +52,7 @@ public class Facade {
 		}
 		Assignment theAssignment = new Assignment();
 		theAssignmentMenu.showMenu(theAssignment, thePerson);
-		theCourse.AddAssignment(theAssignment);
+		theCourse.addAssignment(theAssignment);
 	}
 
 	/*
