@@ -12,7 +12,7 @@ public class Instructor extends Person {
         type = 1;
     }
 
-    public CourseMenu CreateCourseMenu(Course theCourse, int theLevel) {
+    public CourseMenu createCourseMenu(Course theCourse, int theLevel) {
         if (theLevel == 0) {
             theCourseMenu = new HighLevelCourseMenu();
         } else/// 1: LowLevel

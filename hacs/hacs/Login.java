@@ -18,7 +18,7 @@ import java.io.*;
  * Update to Java 8
  */
 
-public class login extends JDialog {
+public class Login extends JDialog {
 
     boolean m_bExit = false;
     JLabel jLabel1 = new JLabel();
@@ -34,7 +34,7 @@ public class login extends JDialog {
     private String userBox = null;
     private USER_TYPE userType = USER_TYPE.Student;
 
-    public login() {
+    public Login() {
         try {
             jbInit();
             setSize(300, 300);
@@ -138,7 +138,8 @@ public class login extends JDialog {
     }
 
     /**
-    after login get the userType of the login interface */
+     * after login get the userType of the login interface
+     */
     public USER_TYPE getUserType() {
         return userType;
     }

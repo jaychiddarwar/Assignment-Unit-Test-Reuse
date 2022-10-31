@@ -21,12 +21,12 @@ public class Facade {
 
 
     static public boolean Login(UserInfoItem userinfoItem) {
-        login login = new login();
-        login.setModal(true);
-        login.show();
-        userinfoItem.strUserName = login.getUserName();
-        userinfoItem.UserType = login.getUserType();
-        return login.isExit();
+        Login Login = new Login();
+        Login.setModal(true);
+        Login.show();
+        userinfoItem.strUserName = Login.getUserName();
+        userinfoItem.UserType = Login.getUserType();
+        return Login.isExit();
     }
 
     /**
@@ -96,7 +96,7 @@ public class Facade {
 
     void remind() {
         Reminder theReminder = new Reminder();
-        theReminder.showReminder(thePerson.GetCourseList());
+        theReminder.showReminder(thePerson.getCourseList());
     }
 
     void createUser(UserInfoItem userInfoItem) {
@@ -107,7 +107,7 @@ public class Facade {
         {
             thePerson = new Instructor();
         }
-        thePerson.UserName = userInfoItem.strUserName;
+        thePerson.userName = userInfoItem.strUserName;
     }
 
     /**
@@ -131,10 +131,10 @@ public class Facade {
             while ((aline = file.readLine()) != null) {
                 strUserName = getUserName(aline);
                 strCourseName = getCourseName(aline);
-                if (strUserName.compareTo(thePerson.UserName) == 0) {
+                if (strUserName.compareTo(thePerson.userName) == 0) {
                     theSelecteCourse = findCourseByCourseName(strCourseName);
                     if (theSelecteCourse != null) {
-                        thePerson.AddCourse(theSelecteCourse);
+                        thePerson.addCourse(theSelecteCourse);
                     }
                 }
             }
@@ -167,8 +167,8 @@ public class Facade {
      */
     public boolean selectCourse() {
         CourseSelectDlg theDlg = new CourseSelectDlg();
-        theSelecteCourse = theDlg.ShowDlg(thePerson.CourseList);
-        thePerson.CurrentCourse = theSelecteCourse;
+        theSelecteCourse = theDlg.ShowDlg(thePerson.classCourseList);
+        thePerson.currentCourse = theSelecteCourse;
         nCourseLevel = theDlg.nCourseLevel;
         return theDlg.isLogout();
     }
@@ -180,7 +180,7 @@ public class Facade {
      */
 
     public boolean courseOperation() {
-        thePerson.CreateCourseMenu(theSelecteCourse, nCourseLevel);
+        thePerson.createCourseMenu(theSelecteCourse, nCourseLevel);
         return thePerson.showMenu();//// 0: logout 1 select an other course
     }
 
